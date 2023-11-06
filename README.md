@@ -70,16 +70,20 @@ The other variables are used when you have no bookmarks, when you add a new book
 Here's an example with markup the script outputs:
 
 ```
-<div class="bookmarkable">
-  <h1>Your content</h1>
-  <p>...goes here</p>
+<div class="bookmarkable"><!-- Add this class to your content container -->
+  <h1 class="bookmarkable__title bookmarkable__title--bookmarked" id="your-unique-title"><!-- Classes and IDs are automatically added -->
+    Your unique title
+    <button class="bookmarkable__title__bookmark" type="button"><!-- Bookmark toggle button is automatically addded -->
+      <i class="bookmarkable__title__bookmark__icon"></i>
+    </button>
+  </h1>
 
-  <div class="bookmarkable__bookmarks"><!-- Your bookmarks are listed within this container -->
+  <div class="bookmarkable__bookmarks"><!-- Add this container, and your bookmarks are automatically listed within -->
     <div class="bookmarkable__bookmarks__item">
-      <a class="bookmarkable__bookmarks__item__link" href="https://your-domain.com/your-url#your-bookmarked-title">
+      <a class="bookmarkable__bookmarks__item__link" href="https://your-domain.com/your-url#your-unique-title">
         <div class="bookmarkable__bookmarks__item__link__title">
           <i class="bookmarkable__bookmarks__item__link__title__icon"></i>
-          Your bookmarked title
+          Your unique title
         </div>
         <div class="bookmarkable__bookmarks__item__link__date">
           A few seconds ago
@@ -105,8 +109,4 @@ Here's an example with markup the script outputs:
 
 <script src="/js/bookmarkable.js"></script>
 <script src="/css/bookmarkable.css"></script>
-
-
-
-</div>
 ```
