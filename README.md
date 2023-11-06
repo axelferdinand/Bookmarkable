@@ -19,3 +19,30 @@ Bookmarkable.js is a lightweight JavaScript library designed to easily add bookm
 4. Start bookmarking!
 
 ## Configuration:
+In the beginning of Bookmarkable.js you find this config section:
+
+```
+const CONFIG = {
+  BOOKMARKABLE_HEADINGS: ['h1', 'h2'],
+  NO_BOOKMARKS_MESSAGE: "Use the bookmark function to add a paragraph or a page as a favorite, so you can quickly find your way back to the content!",
+  BOOKMARK_ADDED_NOTIFICATION: "You added a new favorite!",
+  BOOKMARK_REMOVED_NOTIFICATION: "You removed a favorite",
+  OPEN_IN_NEW_TAB: "Open in new tab",
+  REMOVE_FROM_FAVORITES: "Remove from favorites",
+  DATE_STAMP: {
+    AGO: "ago",
+    A_FEW_SECONDS_AGO: "A few seconds ago",
+    MONTH: "month",
+    MONTHS: "months",
+    WEEK: "week",
+    WEEKS: "weeks",
+    YESTERDAY: "Yesterday",
+    DAY: "day",
+    DAYS: "days",
+    HOUR: "hour",
+    HOURS: "hours",
+    MINUTE: "minute",
+    MINUTES: "minutes"
+  },
+};
+```
