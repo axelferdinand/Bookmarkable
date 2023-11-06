@@ -4,9 +4,9 @@ Bookmarkable.js is a lightweight JavaScript library designed to easily add bookm
 ## Features:
 **Easy Bookmarking:** Allow users to mark their favorite content with a single click.
 
-**List favorites:** When content is bookmarked, favorites are automatically listed where you prefer to list them.
+**List Favorites:** When content is bookmarked, favorites are automatically listed where you prefer to list them.
 
-**Editable list:** Option to remove favorites you no longer use.
+**Editable List:** Option to remove favorites you no longer use.
 
 **Notifications:** Feedback is provided when a bookmark is added or removed.
 
@@ -14,6 +14,9 @@ Bookmarkable.js is a lightweight JavaScript library designed to easily add bookm
 
 ## How to Use:
 1. Include bookmarkable.js in your project.
-2. Include the provided bookmarkable.scss file for default styles.
+2. Add the class `.bookmarkable` to the container of your content.
 3. Initialize the script.
-4. Start bookmarking!
+4. Include the provided bookmarkable.scss file for default styles.
+5. Start bookmarking!
+
+## Configuration:
