@@ -14,9 +14,8 @@ Bookmarkable.js is a lightweight JavaScript library designed to easily add bookm
 
 ## How to Use:
 1. Include bookmarkable.js in your project.
-2. Add the class `.bookmarkable` to the container of your content.
-3. Initialize the script.
-4. Include the provided bookmarkable.scss file for default styles.
-5. Start bookmarking!
+2. Add the class `.bookmarkable` to any container with content you would like to be bookmarkable.
+3. Include the provided bookmarkable.scss file for default styles.
+4. Start bookmarking!
 
 ## Configuration:
