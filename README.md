@@ -13,13 +13,13 @@ Bookmarkable.js is a lightweight JavaScript library designed to easily add bookm
 **Timestamps:** See how long ago a bookmark was added.
 
 ## How to Use:
-1. Include bookmarkable.js in your project.
+1. Include `bookmarkable.js` in your project.
 2. Add the class `.bookmarkable` to any container with content you would like to be bookmarkable.
 3. Include the provided bookmarkable.scss file for default styles.
 4. Start bookmarking!
 
 ## Configuration:
-In the beginning of Bookmarkable.js you find this config section:
+In the beginning of `bookmarkable.js` you find this config section:
 
 ```
 const CONFIG = {
@@ -46,3 +46,7 @@ const CONFIG = {
   },
 };
 ```
+
+As you can see, you are free to select which type of selectors that can be bookmarkable. By default, only H1 og H2 are possible to bookmark.
+
+The other variables are used when you have no bookmarks, when you add a new bookmark or remove one, for the favorites option menu and the timestamp that is added each time you bookmark something.
