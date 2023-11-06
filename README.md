@@ -96,11 +96,15 @@ Here's an example with markup the script outputs, to help you better understand 
       <div class="bookmarkable__bookmarks__item__actions" style="display: none;">
         <button class="bookmarkable__bookmarks__item__actions__item" type="button">
           <i class="bookmarkable__bookmarks__item__actions__item__icon bookmarkable__bookmarks__item__actions__item__icon--new-tab"></i>
-            <span class="bookmarkable__bookmarks__item__actions__item__title">Open in new tab</span>
+            <span class="bookmarkable__bookmarks__item__actions__item__title">
+              Open in new tab
+          </span>
         </button>
         <button class="bookmarkable__bookmarks__item__actions__item" type="button">
           <i class="bookmarkable__bookmarks__item__actions__item__icon bookmarkable__bookmarks__item__actions__item__icon--remove"></i>
-          <span class="bookmarkable__bookmarks__item__actions__item__title">Remove from favorites</span>
+          <span class="bookmarkable__bookmarks__item__actions__item__title">
+            Remove from favorites
+          </span>
         </button>
       </div>
     </div>
