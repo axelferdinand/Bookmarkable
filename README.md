@@ -19,18 +19,22 @@ Bookmarkable.js is a lightweight JavaScript library designed to easily add bookm
 4. Include the provided bookmarkable.scss file for default styles.
 5. Start bookmarking!
 
-## Configuration:
-Remember to add the class `.bookmarkable` to every container with content you would like to be bookmarkable, AND to the container where you would like to list the bookmarked content.
+## Example:
+Add the class `.bookmarkable` to every container with content you would like to be bookmarkable, AND to the container where you would like to list the bookmarked content.
 
 ```
-<div class="your-container bookmarkable">
+<div class="bookmarkable">
   <h1>Your content</h1>
   <p>...goes here</p>
 
-  <div class="bookmarkable__bookmarks"></div> <!-- Your bookmarks are listed within this div -->
+  <div class="bookmarkable__bookmarks"></div> <!-- Your bookmarks are listed within this container -->
 </div>
+
+<script src="/js/bookmarkable.js"></script>
+<script src="/css/bookmarkable.css"></script>
 ```
 
+## Configuration:
 In the beginning of `bookmarkable.js` you find this config section:
 
 ```
@@ -67,6 +71,40 @@ Here's an example with markup the script outputs:
 
 ```
 <div class="bookmarkable">
+  <h1>Your content</h1>
+  <p>...goes here</p>
+
+  <div class="bookmarkable__bookmarks"><!-- Your bookmarks are listed within this container -->
+    <div class="bookmarkable__bookmarks__item">
+      <a class="bookmarkable__bookmarks__item__link" href="https://your-domain.com/your-url#your-bookmarked-title">
+        <div class="bookmarkable__bookmarks__item__link__title">
+          <i class="bookmarkable__bookmarks__item__link__title__icon"></i>
+          Your bookmarked title
+        </div>
+        <div class="bookmarkable__bookmarks__item__link__date">
+          A few seconds ago
+        </div>
+      </a>
+      <button class="bookmarkable__bookmarks__item__button" type="button">
+        <i class="bookmarkable__bookmarks__item__button__icon"></i>
+      </button>
+      <div class="bookmarkable__bookmarks__item__actions" style="display: none;">
+        <button class="bookmarkable__bookmarks__item__actions__item" type="button">
+          <i class="bookmarkable__bookmarks__item__actions__item__icon bookmarkable__bookmarks__item__actions__item__icon--new-tab"></i>
+            <span class="bookmarkable__bookmarks__item__actions__item__title">Open in new tab</span>
+        </button>
+        <button class="bookmarkable__bookmarks__item__actions__item" type="button">
+          <i class="bookmarkable__bookmarks__item__actions__item__icon bookmarkable__bookmarks__item__actions__item__icon--remove"></i>
+          <span class="bookmarkable__bookmarks__item__actions__item__title">Remove from favorites</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="/js/bookmarkable.js"></script>
+<script src="/css/bookmarkable.css"></script>
 
 
 
