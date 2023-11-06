@@ -49,4 +49,14 @@ const CONFIG = {
 
 As you can see, you are free to select which type of selectors that can be bookmarkable. By default, only H1 og H2 are possible to bookmark.
 
-The other variables are used when you have no bookmarks, when you add a new bookmark or remove one, for the favorites option menu and the timestamp that is added each time you bookmark something.
+The other variables are used when you have no bookmarks, when you add a new bookmark or remove one, for the favorites option menu and the timestamp that is added each time you bookmark something. Feel free to update the variables to fit your needs.
+
+Here's an example with markup the script outputs:
+
+```
+<div class="bookmarkable">
+
+
+
+</div>
+```
