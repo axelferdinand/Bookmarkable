@@ -13,12 +13,24 @@ Bookmarkable.js is a lightweight JavaScript library designed to easily add bookm
 **Timestamps:** See how long ago a bookmark was added.
 
 ## How to Use:
-1. Include `bookmarkable.js` in your project.
+1. Include `bookmarkable.js` in your project, either at the end of your project markup or using `defer` if you include it in the head.
 2. Add the class `.bookmarkable` to any container with content you would like to be bookmarkable.
-3. Include the provided bookmarkable.scss file for default styles.
-4. Start bookmarking!
+3. Add `<div class="bookmarkable__bookmarks"></div>` anywhere you would like your bookmarks to be listed.
+4. Include the provided bookmarkable.scss file for default styles.
+5. Start bookmarking!
 
 ## Configuration:
+Remember to add the class `.bookmarkable` to every container with content you would like to be bookmarkable, AND to the container where you would like to list the bookmarked content.
+
+```
+<div class="your-container bookmarkable">
+  <h1>Your content</h1>
+  <p>...goes here</p>
+
+  <div class="bookmarkable__bookmarks"></div> <!-- Your bookmarks are listed within this div -->
+</div>
+```
+
 In the beginning of `bookmarkable.js` you find this config section:
 
 ```
