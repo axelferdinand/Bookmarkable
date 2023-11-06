@@ -16,18 +16,18 @@ Bookmarkable.js is a lightweight JavaScript library designed to easily add bookm
 1. Include `bookmarkable.js` in your project, either at the end of your project markup or using `defer` if you include it in the head.
 2. Add the class `.bookmarkable` to any container with content you would like to be bookmarkable.
 3. Add `<div class="bookmarkable__bookmarks"></div>` anywhere you would like your bookmarks to be listed.
-4. Include the provided bookmarkable.scss file for default styles.
+4. Include and compile the provided `bookmarkable.scss` file for default styles.
 5. Start bookmarking!
 
 ## Example:
 Add the class `.bookmarkable` to every container with content you would like to be bookmarkable, AND to the container where you would like to list the bookmarked content.
 
 ```
-<div class="bookmarkable">
+<div class="bookmarkable"><!-- Add this class -->
   <h1>Your content</h1>
   <p>...goes here</p>
 
-  <div class="bookmarkable__bookmarks"></div> <!-- Your bookmarks are listed within this container -->
+  <div class="bookmarkable__bookmarks"></div><!-- Your bookmarks are listed within this container -->
 </div>
 
 <script src="/js/bookmarkable.js"></script>
@@ -67,7 +67,8 @@ As you can see, you are free to select which type of selectors that can be bookm
 
 The other variables are used when you have no bookmarks, when you add a new bookmark or remove one, for the favorites option menu and the timestamp that is added each time you bookmark something. Feel free to update the variables to fit your needs.
 
-Here's an example with markup the script outputs:
+## Script output
+Here's an example with markup the script outputs, to help you better understand how to adapt it to your project:
 
 ```
 <div class="bookmarkable"><!-- Add this class to your content container -->
