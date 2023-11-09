@@ -31,7 +31,7 @@ Add the class `.bookmarkable` to every container with content you would like to 
 </div>
 
 <script src="/js/bookmarkable.js"></script>
-<script src="/css/bookmarkable.css"></script>
+<link rel="stylesheet" href="/css/bookmarkable.css"/>
 ```
 
 ## Configuration:
