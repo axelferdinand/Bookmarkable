@@ -115,3 +115,7 @@ Here's an example with markup the script outputs, to help you better understand 
 <script src="/js/bookmarkable.js"></script>
 <link rel="stylesheet" href="/css/bookmarkable.css"/>
 ```
+
+## Demo
+
+Here is a working demo: [https://codepen.io/prototypen/pen/mdvRRZr](https://codepen.io/prototypen/pen/mdvRRZr)
