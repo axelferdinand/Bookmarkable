@@ -1,4 +1,4 @@
-# Bookmarkable
+# Bookmarkable.js
 Bookmarkable.js is a lightweight JavaScript library designed to easily add bookmark functionality to your website. With just a few simple steps, your users can quickly mark and revisit their favorite content.
 
 ## Features:
