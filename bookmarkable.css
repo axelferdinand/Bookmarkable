@@ -27,9 +27,9 @@
   border-bottom: 1px solid #DBDCDD;
 }
 .bookmarkable__bookmarks__item {
+  position: relative;
   border-top: 1px solid #DBDCDD;
   color: #000000;
-  position: relative;
 }
 .bookmarkable__bookmarks__item__icon {
   color: #c9007f;
@@ -50,6 +50,7 @@
   padding-left: 1rem;
   display: grid;
   grid-template-columns: minmax(auto, auto) minmax(auto, auto);
+  text-decoration: none;
 }
 .bookmarkable__bookmarks__item__link__title {
   padding-right: 1rem;
@@ -155,10 +156,14 @@ button {
   width: auto;
   overflow: visible;
   background: transparent;
+  /* inherit font & color from ancestor */
   color: inherit;
   font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
   line-height: normal;
+  /* Corrects font smoothing for webkit */
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
 }

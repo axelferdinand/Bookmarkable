@@ -76,10 +76,9 @@ $color-light: #FFF;
     border-bottom: 1px solid $color-border;
   
     &__item {
+      position: relative;
       border-top: 1px solid $color-border;
       color: $color-text;
-      
-      position: relative;
   
       &__icon {
         color: $color-primary;
@@ -104,6 +103,7 @@ $color-light: #FFF;
   
         display: grid;
         grid-template-columns: minmax(auto, auto) minmax(auto, auto);
+        text-decoration: none;
   
         &__title {
           padding-right: 1rem;
@@ -236,21 +236,26 @@ $color-light: #FFF;
   margin: auto;
 }
 
-// Reset button style
 button {
   border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  overflow: visible;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
 
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
+    background: transparent;
 
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
 
-  -webkit-appearance: none;
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
 }
