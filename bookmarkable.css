@@ -1,0 +1,164 @@
+.bookmarkable__title {
+  position: relative;
+  display: inline-block;
+}
+.bookmarkable__title__bookmark {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+}
+.bookmarkable__title__bookmark__icon {
+  opacity: 0;
+  padding: 0.25em;
+}
+.bookmarkable__title__bookmark:hover .bookmarkable__bookmark__icon {
+  color: #c9007f;
+}
+.bookmarkable__title:hover .bookmarkable__title__bookmark__icon {
+  opacity: 1;
+}
+.bookmarkable__title--bookmarked .bookmarkable__title__bookmark__icon {
+  opacity: 1 !important;
+  color: #c9007f;
+}
+.bookmarkable__bookmarks {
+  display: grid;
+  border-bottom: 1px solid #DBDCDD;
+}
+.bookmarkable__bookmarks__item {
+  border-top: 1px solid #DBDCDD;
+  color: #000000;
+  position: relative;
+}
+.bookmarkable__bookmarks__item__icon {
+  color: #c9007f;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.bookmarkable__bookmarks__item--empty {
+  width: 100%;
+  text-align: center;
+}
+.bookmarkable__bookmarks__item--empty p {
+  margin: 0rem auto 2rem auto;
+  color: #6E6E6E;
+}
+.bookmarkable__bookmarks__item__link {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: minmax(auto, auto) minmax(auto, auto);
+}
+.bookmarkable__bookmarks__item__link__title {
+  padding-right: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  height: 1.25rem;
+  line-height: 1.25rem;
+}
+.bookmarkable__bookmarks__item__link__title__icon {
+  padding-right: 0.5rem;
+  color: #c9007f;
+}
+.bookmarkable__bookmarks__item__link__date {
+  height: 1.25rem;
+  line-height: 1.25rem;
+  font-size: 0.8rem;
+  width: 9rem;
+  margin-right: 3rem;
+  margin-left: auto;
+  color: #6E6E6E;
+}
+@media only screen and (max-width: 600px) {
+  .bookmarkable__bookmarks__item__link__date {
+    display: none;
+  }
+}
+.bookmarkable__bookmarks__item__link:hover {
+  background-color: #e9eeed;
+}
+.bookmarkable__bookmarks__item__link:hover .bookmarkable__bookmarks__item__title {
+  color: #c9007f;
+}
+.bookmarkable__bookmarks__item__button {
+  margin-left: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+.bookmarkable__bookmarks__item__button:hover {
+  background-color: #e9eeed;
+}
+.bookmarkable__bookmarks__item__actions {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 100;
+  background-color: #FFF;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+}
+.bookmarkable__bookmarks__item__actions__item {
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  text-align: left;
+  font-size: 0.8rem;
+}
+.bookmarkable__bookmarks__item__actions__item__icon {
+  padding-right: 0.25rem;
+}
+.bookmarkable__bookmarks__item__actions__item:hover {
+  background-color: #e9eeed;
+}
+.bookmarkable__notification {
+  position: fixed;
+  z-index: 2147483645;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  background-color: #FFF;
+  color: color(text);
+  border: 1px solid #DBDCDD;
+  font-size: 1rem;
+  line-height: 1;
+}
+.bookmarkable__notification__icon {
+  height: 1rem;
+}
+.bookmarkable__notification__title {
+  display: none;
+  padding-left: 0.5rem;
+}
+@media only screen and (min-width: 600px) {
+  .bookmarkable__notification__title {
+    display: inline-block;
+  }
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}

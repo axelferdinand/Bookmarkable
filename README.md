@@ -113,5 +113,5 @@ Here's an example with markup the script outputs, to help you better understand 
 </div>
 
 <script src="/js/bookmarkable.js"></script>
-<script src="/css/bookmarkable.css"></script>
+<link rel="stylesheet" href="/css/bookmarkable.css"/>
 ```

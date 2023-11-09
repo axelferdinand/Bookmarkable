@@ -1,0 +1,256 @@
+// Bookmarkable.scss
+
+// There's two dependencies to make Bookmarkable work as in the demo:
+
+// DEPENDENCY 1: Font Awesome
+// https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css
+
+// DEPENDENCY 2: Animate.css
+// https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css
+
+// Variables
+$color-text: #000000;
+$color-text-lighter: #6E6E6E;
+$color-primary: #c9007f;
+$color-border: #DBDCDD;
+$color-background: #e9eeed;
+$color-light: #FFF;
+
+// Bookmarkable
+.bookmarkable {
+
+  &__title {
+    position: relative;
+    display: inline-block;
+
+    &__bookmark {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateX(100%);
+  
+      &__icon {
+        opacity: 0; // Hide by default
+        padding: 0.25em; // Adds extra click surface
+      }
+  
+      &:hover {
+        .bookmarkable {
+          &__bookmark {
+            &__icon {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+    
+    &:hover {
+      .bookmarkable {
+        &__title {
+          &__bookmark {
+            &__icon {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    &--bookmarked {
+      .bookmarkable {
+        &__title {
+          &__bookmark {
+            &__icon {
+              opacity: 1 !important;
+              color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__bookmarks {
+    display: grid;
+    border-bottom: 1px solid $color-border;
+  
+    &__item {
+      border-top: 1px solid $color-border;
+      color: $color-text;
+      
+      position: relative;
+  
+      &__icon {
+        color: $color-primary;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+  
+      &--empty {
+        width: 100%;
+        text-align: center;
+        
+        p {
+          margin: 0rem auto 2rem auto;
+          color: $color-text-lighter;
+        }
+      }
+  
+      &__link {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+  
+        display: grid;
+        grid-template-columns: minmax(auto, auto) minmax(auto, auto);
+  
+        &__title {
+          padding-right: 1rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
+          height: 1.25rem;
+          line-height: 1.25rem;
+        
+          &__icon {
+            padding-right: 0.5rem;
+            color: $color-primary;
+          }
+        }
+  
+        &__date {
+          height: 1.25rem;
+          line-height: 1.25rem;
+          font-size: 0.8rem;
+          width: 9rem;
+          margin-right: 3rem; // Equals action button
+          margin-left: auto;
+          color: $color-text-lighter;
+  
+          @media only screen and (max-width: 600px) {
+            display: none;
+          }
+        }
+  
+        &:hover {
+          background-color: $color-background;
+          
+          .bookmarkable {
+            &__bookmarks {
+              &__item {
+                &__title {
+                  color: $color-primary;
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      &__button {
+        margin-left: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+  
+        &:hover {
+          background-color: $color-background;
+        }
+
+        &__icon {
+
+        }
+      }
+  
+      &__actions {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 100;
+        background-color: $color-light;
+        box-shadow: 0 3px 4px 0 rgba($color-text, 0.16);
+        display: flex;
+        flex-direction: column;
+        
+        &__item {
+          padding: 0.5rem 0.75rem;
+          width: 100%;
+          text-align: left;
+          font-size: 0.8rem;
+  
+          &__icon {
+            padding-right: 0.25rem;
+
+            &--new-tab {
+              
+            }
+
+            &--remove {
+              
+            }
+          }
+  
+          &:hover {
+            background-color: $color-background;
+          }
+        }
+      }
+    }
+  }
+
+  &__notification {
+    position: fixed;
+    z-index: 2147483645; // Highest possible z-index
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    background-color: $color-light;
+    color: color(text);
+    border: 1px solid $color-border;
+    font-size: 1rem;
+    line-height: 1;
+  
+    &__icon {
+      height: 1rem;
+    }
+  
+    &__title {
+      display: none;
+      padding-left: 0.5rem;
+  
+      @media only screen and (min-width: 600px) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// Demo
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+// Reset button style
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  -webkit-appearance: none;
+}
